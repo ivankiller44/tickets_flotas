@@ -7,6 +7,7 @@ import { DescripcionComponent } from './descripcion/descripcion.component';
 import { RoutesComponent } from './routes/routes.component';
 import { NavComponent } from './nav/nav.component';
 import { DateTimePriceComponent } from './date-time-price/date-time-price.component';
+import { BusComponent } from './bus/bus.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { DateTimePriceComponent } from './date-time-price/date-time-price.compon
     RoutesComponent,
     NavComponent,
     DateTimePriceComponent,
+    BusComponent,
   ],
   imports: [
     BrowserModule,

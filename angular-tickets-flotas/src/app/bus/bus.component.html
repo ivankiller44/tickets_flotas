@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<title>Buses</title>
+</head>
+<body>
+    <div class="action">
+        <button id="add_bus_btn">Add</button>
+    </div>
+    <div class="content">
+        <div class="class1">
+            <p>Bus Normal</p>
+        </div>
+        <div class="class2">
+            <p>Bus Cama</p>
+        </div>
+        <div class="class3">
+            <p>Bus Leito</p>
+        </div>
+    </div>
+    <div class="popup_bus_background">
+        <div class="popup_bus">
+            <form action="">
+                <div class="bus">Buses</div>
+                <div class="bus_close">+</div>
+                <div class="attribute_list">
+                    <div class="attribute_section">
+                        <div class="attribute_name">Name</div>
+                        <input type="text" name="" id="attribute_bus">
+                    </div>
+                    <div class="attribute_section">
+                        <div class="attribute_name">Class</div>
+                        <select name="" id="attribute_bus">
+                            <option value="bus_default">Default</option>
+                            <option value="bus_normal">Bus Normal</option>
+                            <option value="bus_cama">Bus Cama</option>
+                            <option value="bus_leito">Bus Leito</option>                    
+                        </select>
+                    </div>
+                    <div class="attribute_section">
+                        <div class="attribute_name">Capacity</div>
+                        <input type="number" name="" id="attribute_bus" min="1">
+                    </div>
+                    <div class="attribute_section">
+                        <div class="attribute_route_name">Route</div>
+                        <input type="text" class="attribute_route_origin"   id="attribute_route_bus" placeholder="Origin" disabled>
+                        <input type="text" class="attribute_route_destination"   id="attribute_route_bus" placeholder="Destination" disabled>
+                        <input type="text" class="attribute_route_day"   id="attribute_route_bus" placeholder="Day" disabled>
+                        <input type="text" class="attribute_route_time"   id="attribute_route_bus" placeholder="00:00" disabled>
+                    </div>
+                    <div class="attribute_section">
+                        <div class="attribute_name">Price</div>
+                        <input type="number" name="" id="attribute_bus" min="0">
+                    </div>
+                    <div class="attribute_section">
+                        <div class="attribute_name">Reserved</div>
+                        <input type="number" name="" id="attribute_bus" placeholder="0" min="0" disabled>
+                    </div>
+                    <div class="attribute_section">
+                        <div class="indicators_btn">
+                            <button class="in_service_bus_btn">In Service</button>      
+                            <button class="available_bus_btn">Available</button>      
+                            <button class="out_of_service_bus_btn">Out of Service</button> 
+                        </div>
+                        <button class="save_btn">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="bus.js"></script>
+</html> 
