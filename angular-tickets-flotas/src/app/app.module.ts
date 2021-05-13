@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DescripcionComponent } from './descripcion/descripcion.component';
 import { RoutesComponent } from './routes/routes.component';
 import { NavComponent } from './nav/nav.component';
+import { DateTimePriceComponent } from './date-time-price/date-time-price.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { NavComponent } from './nav/nav.component';
     DescripcionComponent,
     RoutesComponent,
     NavComponent,
+    DateTimePriceComponent,
   ],
   imports: [
     BrowserModule,
