@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<title>Routes</title>
+</head>
+<body>
+    <div class="action">
+        <button id="add_route_btn">Add Route</button>
+        <button id="add_category_btn">Add Catergory</button>
+    </div>
+    <div class="content"> 
+        <div class="cate1">
+            <p>Catergory 1</p>
+            <table style="width: 100%;">
+                <th>Destination</th>
+                <th>Indicators</th>
+            </table>
+        </div>
+        <div class="cate2">
+            <p>Catergory 2</p>
+            <table>
+                <th>Destination</th>
+                <th>Indicators</th>
+            </table>
+        </div>
+        <div class="cate3">
+            <p>Catergory 3</p>
+            <table>
+                <th>Destination</th>
+                <th>Indicators</th>
+            </table>
+        </div>
+        <div class="cate4">
+            <p>Catergory 4</p>
+            <table>
+                <th>Destination</th>
+                <th>Indicators</th>
+            </table>
+        </div>
+        <div class="cate5">
+            <p>Catergory 5</p>
+            <table>
+                <th>Destination</th>
+                <th>Indicators</th>
+            </table>
+        </div>
+        <div class="cate6">
+            <p>Catergory 6</p>
+            <table>
+                <th>Destination</th>
+                <th>Indicators</th>
+            </table>
+        </div>
+        <div class="cate7">
+            <p>Catergory 7</p>
+            <table>
+                <th>Destination</th>
+                <th>Indicators</th>
+            </table>
+        </div>
+        <div class="cate8">
+            <p>Catergory 8</p>
+            <table>
+                <th>Destination</th>
+                <th>Indicators</th>
+            </table>
+        </div>
+        <div class="cate9">
+            <p>Catergory 9</p>
+            <table>
+                <th>Destination</th>
+                <th>Indicators</th>
+            </table>
+        </div>
+    </div>
+
+    <div class="popup_route_background">
+        <div class="popup_route_form">
+            <form action="">
+                <div class="form_name_route">Create Route</div>
+                <div class="route_close">+</div>
+                <div class="attribute_list">
+                    <div class="attribute_section">
+                        <div class="attribute_name">Origin</div>
+                        <input type="text" name="" id="attribute_route">
+                    </div>
+                    <div class="attribute_section">
+                        <div class="attribute_name">Destination</div>
+                        <input type="text" name="" id="attribute_route">
+                    </div>
+                    <div class="attribute_section">
+                        <div class="attribute_name">Bus</div>
+                        <input type="text" name="" id="attribute_route">
+                    </div>
+                    <div class="attribute_section">
+                        <div class="attribute_name">Price</div>
+                        <input type="text" name="" id="attribute_route">
+                    </div>
+                    <div class="attribute_section">
+                        <div class="attribute_time_name">Date</div>
+                        <input type="date" class="attribute_route_date" id="attribute_route_time" placeholder="Defaulty Date">
+                        <select name="" class="attribute_route_day" id="attribute_route_time">
+                            <option id="option_day" value="monday">Mon</option>
+                            <option id="option_day" value="tuesday">Tue</option>
+                            <option id="option_day" value="wednesday">Wed</option>
+                            <option id="option_day" value="thursday">Thu</option>
+                            <option id="option_day" value="friday">Fri</option>
+                            <option id="option_day" value="saturday">Sat</option>
+                            <option id="option_day" value="sunday">Sun</option>
+                        </select>
+                    </div>
+                    
+                    <div class="attribute_section">
+                        <div class="attribute_name">Time</div>
+                        <input type="text" name="" id="attribute_route" placeholder="Default Time" disabled>
+                    </div>
+                    <div class="attribute_section">
+                        <div class="indicators_btn">
+                            <button class="enable_btn">Enable</button>
+                            <button class="disable_btn">Disable</button>
+                            <button class="save_btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+        </form>
+        </div>
+    </div>
+    <div class="popup_o_d_route_list_background">
+        <div class="popup_o_d_route_list">
+            <form action="">
+                <div class="origin_title_name">Default Origin</div>
+                <div class="o_d_route_list_close">+</div>
+                <div class="attribute_list">
+                    <div class="attribute_section">
+                        <div class="route_od_list_search">
+                            <input type="date" name="" id="route_od_list_date">
+                            <input type="search" name="" id="route_od_list_time" placeholder="Time">
+                        </div>
+                    </div>
+                    <div class="attribute_section">
+                        <table>
+                      
+                        </table>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="popup_category_background">
+        <div class="popup_category">
+            <form action="">
+                <div class="category">Categories</div>
+                <div class="category_close">+</div>
+                <div class="attribute_list">
+                    <div class="attribute_catergoty_section">
+                        <table style="width: 100%;" id="table_cate">
+                            <tr>
+                                <th>Category Number</th>
+                                <th>Name</th>
+                                <th>Abbreviation</th>
+                                <th>Indicators</th>
+                            </tr>
+                            <tr>
+                                <td><div>C1</div></td>
+                                <td><div>Cochabamba</div></td>
+                                <td><div>CBBA</div></td>
+                                <td style="border: solid black 2px;">
+                                    <button class="enable_category_btn">Enable</button>
+                                    <button class="disable_category_btn">Disable</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="attribute_section">
+                        <div class="attribute_addition">
+                            <input type="text" class="attribute_category_btn" id="attribute_category_name" placeholder="Name">
+                            <input type="text" class="attribute_category_btn" id="attribute_category_abb" placeholder="Abbreviation">
+                            <button class="addition_category_btn">+</button>
+                        </div>
+                        <button class="save_btn" id="category_save_btn">Save</button> 
+                    </div>
+                </div>             
+            </form>
+        </div>
+    </div>
+</body>
+<script src="routes.js"></script>
+</html> 
