@@ -1,0 +1,24 @@
+*{
+    font-family: 'Montserrat';
+}
+h2{
+    background-color: gray;
+    color: white;
+    height: 76px;
+    width: 410px;
+    text-align: center;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    line-height: 76px;
+    font-size: 24px;
+}
+h3{
+    background-color: gray;
+    color: white;
+    height: 45px;
+    width: 269px;
+    text-align: center;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    line-height: 45px;
+}
