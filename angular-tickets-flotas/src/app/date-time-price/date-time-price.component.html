@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<title>Date/Time/Price</title>
+</head>
+<body>
+    <div class="action">
+        <input type="date" name="" class="search_general">
+        <button id="add_dtp_btn">Add</button>
+    </div>
+    <div class="content">
+        <div class="date">
+            <p>Specific Date</p>
+        </div>
+        <div class="today">
+            <p>Today</p>
+        </div>
+        <div class="tomorrow">
+            <p>Tomorrow</p>
+        </div>
+    </div>
+    <div class="popup_dtp_background">
+        <div class="popup_dtp">
+            <form action="">
+                <div class="dtp_title">Assign Time</div>
+                <div class="dtp_close">+</div>
+                <div class="attribute_list">
+                    <div class="attribute_section">
+                        <input type="date" name="" id="attribute_search_dtp_date" placeholder="Search Date">
+                        <select name="" id="attribute_search_dtp_route" placeholder="Orgin-Destination">
+                            
+                        </select>
+                    </div>
+                    <div class="attribute_section">
+                        <table>
+
+                        </table>
+                    </div>
+                    <div class="attribute_section">
+                        <div class="addition_dtp">
+                            <select name="" id="addition_dtp_day" placeholder="Day">
+                                <option value="monday">Mon</option>
+                                <option value="tuesday">Tue</option>
+                                <option value="wednesday">Wed</option>
+                                <option value="thursday">Thu</option>
+                                <option value="friday">Fri</option>
+                                <option value="saturday">Sat</option>
+                                <option value="sunday">Sun</option>
+                            </select>
+                            <input type="number" name="" id="addition_dtp_time" placeholder="00:00" min="0">
+                            <input type="text" name="" id="addition_dtp_price" placeholder="000 bs">
+                            <button class="addition_dtp_btn">+</button>
+                        </div>
+                        <button class="save_btn">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="price.js"></script>
+</html> 
