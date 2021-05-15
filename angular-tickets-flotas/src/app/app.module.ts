@@ -8,6 +8,7 @@ import { RoutesComponent } from './routes/routes.component';
 import { NavComponent } from './nav/nav.component';
 import { DateTimePriceComponent } from './date-time-price/date-time-price.component';
 import { BusComponent } from './bus/bus.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BusComponent } from './bus/bus.component';
     NavComponent,
     DateTimePriceComponent,
     BusComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
