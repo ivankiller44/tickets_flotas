@@ -1,0 +1,28 @@
+nav{
+    width: 100%;
+}
+
+a{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    height: 38px;
+    width: 24.46%;
+    text-decoration: none;
+    border: solid 2px gray;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    text-align: center;
+}
+.sets{
+    font-size: 25px;
+    background-color: gray;
+    color: white;
+    line-height: 38px;
+}
+a:hover{
+    background-color: white;
+    border-color: gray;
+    color: gray;
+}
