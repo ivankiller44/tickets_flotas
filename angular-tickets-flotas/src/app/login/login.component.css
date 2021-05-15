@@ -57,4 +57,5 @@
     background-color: darkgray;
     border: none;
     color: white;
+    transition: 0.3s;
   }
