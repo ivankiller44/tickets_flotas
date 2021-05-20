@@ -20,6 +20,7 @@ a{
     background-color: gray;
     color: white;
     line-height: 38px;
+    margin-right: 3px;
 }
 a:hover{
     background-color: white;
