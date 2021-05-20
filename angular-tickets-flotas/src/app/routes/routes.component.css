@@ -89,13 +89,13 @@
     border-bottom-right-radius: 40px;
 }
 /*Popup Section*/
-.popup_route_bg/*, .popup_route_list_bg, .popup_category_bg*/{
+.popup_route_bg, .popup_route_list_bg, .popup_category_bg{
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.7);
     position: absolute;
     top: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
