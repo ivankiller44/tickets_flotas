@@ -79,32 +79,32 @@
         </div>
     </div>
 
-    <div class="popup_route_background">
+    <div class="popup_route_bg">
         <div class="popup_route_form">
             <form action="">
-                <div class="form_name_route">Create Route</div>
-                <div class="route_close">+</div>
+                <div class="form_name">Create Route</div>
+                <div class="form_close_btn" id="route_close_btn">+</div>
                 <div class="attribute_list">
                     <div class="attribute_section">
                         <div class="attribute_name">Origin</div>
-                        <input type="text" name="" id="attribute_route">
+                        <input type="text" class="attribute_route" id="">
                     </div>
                     <div class="attribute_section">
                         <div class="attribute_name">Destination</div>
-                        <input type="text" name="" id="attribute_route">
+                        <input type="text" class="attribute_route" id="">
                     </div>
                     <div class="attribute_section">
                         <div class="attribute_name">Bus</div>
-                        <input type="text" name="" id="attribute_route">
+                        <input type="text" class="attribute_route" id="">
                     </div>
                     <div class="attribute_section">
                         <div class="attribute_name">Price</div>
-                        <input type="text" name="" id="attribute_route">
+                        <input type="text" class="attribute_route" id="">
                     </div>
                     <div class="attribute_section">
-                        <div class="attribute_time_name">Date</div>
-                        <input type="date" class="attribute_route_date" id="attribute_route_time" placeholder="Defaulty Date">
-                        <select name="" class="attribute_route_day" id="attribute_route_time">
+                        <div class="attribute_name">Date</div>
+                        <input type="date" class="attribute_route_dt" id="attribute_route_date">
+                        <select class="attribute_route_dt" id="attribute_route_day">
                             <option id="option_day" value="monday">Mon</option>
                             <option id="option_day" value="tuesday">Tue</option>
                             <option id="option_day" value="wednesday">Wed</option>
@@ -117,29 +117,28 @@
                     
                     <div class="attribute_section">
                         <div class="attribute_name">Time</div>
-                        <input type="text" name="" id="attribute_route" placeholder="Default Time" disabled>
+                        <input type="text" class="attribute_route" id="" placeholder="Default Time" disabled>
                     </div>
                     <div class="attribute_section">
-                        <div class="indicators_btn">
-                            <button class="enable_btn">Enable</button>
-                            <button class="disable_btn">Disable</button>
-                            <button class="save_btn">Save</button>
+                        <div class="route_indicators_btn">
+                            <button class="indicators_btn" id="enable_route_btn">Enable</button>
+                            <button class="indicators_btn" id="disable_route_btn">Disable</button>
                         </div>
+                        <button class="indicators_btn" id="save_route_btn">Save</button>
                     </div>
                 </div>
         </form>
         </div>
     </div>
-    <div class="popup_o_d_route_list_background">
-        <div class="popup_o_d_route_list">
+    <div class="popup_route_list_bg">
+        <div class="popup_route_list">
             <form action="">
-                <div class="origin_title_name">Default Origin</div>
-                <div class="o_d_route_list_close">+</div>
+                <div class="form_name" id="defualt_origin_name">Default Origin</div>
+                <div class="form_close_btn" id="route_list_close_btn">+</div>
                 <div class="attribute_list">
                     <div class="attribute_section">
-                        <div class="route_od_list_search">
-                            <input type="date" name="" id="route_od_list_date">
-                            <input type="search" name="" id="route_od_list_time" placeholder="Time">
+                        <div class="route_list_search">
+                            <input type="date" class="route_list_search_item" id="route_list_search_date">
                         </div>
                     </div>
                     <div class="attribute_section">
@@ -151,13 +150,13 @@
             </form>
         </div>
     </div>
-    <div class="popup_category_background">
-        <div class="popup_category">
+    <div class="popup_category_bg">
+        <div class="popup_category_form">
             <form action="">
-                <div class="category">Categories</div>
-                <div class="category_close">+</div>
+                <div class="form_name">Categories</div>
+                <div class="form_close_btn" id="category_close_btn">+</div>
                 <div class="attribute_list">
-                    <div class="attribute_catergoty_section">
+                    <div class="category_list_section">
                         <table style="width: 100%;" id="table_cate">
                             <tr>
                                 <th>Category Number</th>
@@ -178,11 +177,13 @@
                     </div>
                     <div class="attribute_section">
                         <div class="attribute_addition">
-                            <input type="text" class="attribute_category_btn" id="attribute_category_name" placeholder="Name">
-                            <input type="text" class="attribute_category_btn" id="attribute_category_abb" placeholder="Abbreviation">
-                            <button class="addition_category_btn">+</button>
+                            <input type="text" class="category_addition_attribute" id="category_addition_name" placeholder="Name">
+                            <input type="text" class="category_addition_attribute" id="category_addition_abbrev" placeholder="Abbreviation">
+                            <button class="category_addition_attribute" id="category_addition_btn">+</button>
                         </div>
-                        <button class="save_btn" id="category_save_btn">Save</button> 
+                        <div class="category_modification">
+                            <button id="save_category_btn">Save</button>
+                        </div> 
                     </div>
                 </div>             
             </form>
