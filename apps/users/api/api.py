@@ -11,7 +11,7 @@ def user_api_view(request):
     #list
     if request.method == 'GET':
         #queryset
-        users = User.objects.all()
+        users = User.objects.all().values('id', 'username', 'email', 'password')
         users_serializer = UserSerializer(users, many = True)
         return Response(users_serializer.data, status = status.HTTP_200_OK)
     
