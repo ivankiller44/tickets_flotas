@@ -7,3 +7,10 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
 
+    def to_representation(self, instance):
+        return {
+            'id' : instance['id'],
+            'nombre_usuario' : instance['username'],
+            'correo' : instance['email'],
+            'contraseña' : instance['password']
+        }
