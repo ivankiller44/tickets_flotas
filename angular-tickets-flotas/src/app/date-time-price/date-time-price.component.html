@@ -24,15 +24,15 @@
             <p>Tomorrow</p>
         </div>
     </div>
-    <div class="popup_dtp_background">
+    <div class="popup_dtp_bg">
         <div class="popup_dtp">
             <form action="">
-                <div class="dtp_title">Assign Time</div>
-                <div class="dtp_close">+</div>
+                <div class="form_name">Assign Time</div>
+                <div class="form_close_btn" id="dtp_close_btn">+</div>
                 <div class="attribute_list">
                     <div class="attribute_section">
-                        <input type="date" name="" id="attribute_search_dtp_date" placeholder="Search Date">
-                        <select name="" id="attribute_search_dtp_route" placeholder="Orgin-Destination">
+                        <input type="date" class="attribute_search_dtp" id="attribute_search_dtp_date" placeholder="Search Date">
+                        <select class="attribute_search_dtp" id="attribute_search_dtp_route" placeholder="Orgin-Destination">
                             
                         </select>
                     </div>
@@ -42,8 +42,8 @@
                         </table>
                     </div>
                     <div class="attribute_section">
-                        <div class="addition_dtp">
-                            <select name="" id="addition_dtp_day" placeholder="Day">
+                        <div class="addition_dtp_section">
+                            <select class="addition_attribute" id="addition_dtp_day" placeholder="Day">
                                 <option value="monday">Mon</option>
                                 <option value="tuesday">Tue</option>
                                 <option value="wednesday">Wed</option>
@@ -52,11 +52,13 @@
                                 <option value="saturday">Sat</option>
                                 <option value="sunday">Sun</option>
                             </select>
-                            <input type="number" name="" id="addition_dtp_time" placeholder="00:00" min="0">
-                            <input type="text" name="" id="addition_dtp_price" placeholder="000 bs">
-                            <button class="addition_dtp_btn">+</button>
+                            <input type="number" class="addition_attribute" id="addition_dtp_time" placeholder="00:00" min="0">
+                            <input type="text" 
+                            class="addition_attribute" 
+                            id="addition_dtp_price" placeholder="000 bs">
+                            <button id="addition_dtp_btn">+</button>
                         </div>
-                        <button class="save_btn">Save</button>
+                        <button id="dtp_save_btn">Save</button>
                     </div>
                 </div>
             </form>

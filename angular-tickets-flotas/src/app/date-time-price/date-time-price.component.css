@@ -1,55 +1,6 @@
 *{
     font-family: 'Montserrat';
 }
-h2{
-    background-color: gray;
-    color: white;
-    height: 76px;
-    width: 410px;
-    text-align: center;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    line-height: 76px;
-    font-size: 24px;
-}
-h3{
-    background-color: gray;
-    color: white;
-    height: 45px;
-    width: 269px;
-    text-align: center;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    line-height: 45px;
-}
-nav{
-    width: 100%;
-}
-
-a{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    height: 38px;
-    width: 24.4%;
-    text-decoration: none;
-    border: solid 2px gray;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
-    text-align: center;
-}
-.sets{
-    font-size: 25px;
-    background-color: gray;
-    color: white;
-    line-height: 38px;
-}
-a:hover{
-    background-color: white;
-    border-color: gray;
-    color: gray;
-}
 .action{
     width: 100%;
     margin-top: 15px;
@@ -108,16 +59,16 @@ a:hover{
 .tomrrow{
     grid-column: 3;
 }
-
-.popup_dtp_background{
+/* Route DTP List */
+.popup_dtp_bg{
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0, 0.7);
     position: absolute;
     top: 0;
+    display: none;
     justify-content: center;
     align-items: center;
-    display: none;
 }
 .popup_dtp{
     width: 700px;
@@ -127,12 +78,20 @@ a:hover{
     padding: 20px;
     position: relative;
 }
-.dtp_title{
+.form_name{
     position: absolute;
     top: 0;
     left: 14px;
     font-size: 30px;
     padding: 10px;
+}
+.form_close_btn{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
 }
 .attribute_list{
     margin: 10%;
@@ -142,8 +101,9 @@ a:hover{
     width: 100%;
     display: block;
     margin-top: 20px;
+
 }
-#attribute_search_dtp_date, #attribute_search_dtp_route{
+.attribute_search_dtp{
     width: 25%;
     border: solid lightgrey 2px;
     background-color: transparent;
@@ -165,15 +125,17 @@ a:hover{
     border-bottom-right-radius: 40px;
 }
 
-.addition_dtp{
+.addition_dtp_section{
     width: 60%;
     height: 100%;
     display: inline-block;
 }
-#addition_dtp_day, #addition_dtp_time, #addition_dtp_price{
-    width: 25%;
+.addition_attribute{
+    width: 24.4%;
     margin:0;
+    text-align: center;
     float: left;
+    margin-right: 2px;
     border: solid lightgrey 2px;
     background-color: transparent;
 }
@@ -186,7 +148,7 @@ a:hover{
     height: 92%;
     outline: none;
 }
-.addition_dtp_btn{
+#addition_dtp_btn{
     height: 104%;
     width: 21.3%;
     float: right;
@@ -195,11 +157,11 @@ a:hover{
     border-top-right-radius: 40px;
     background-color: transparent;
 }
-.addition_dtp_btn:hover{
+#addition_dtp_btn:hover{
     background-color: lightgrey;
     color: white;
 }
-.save_btn{
+#dtp_save_btn{
     float: right;
     height: 100%;
     width: 25%;
@@ -207,15 +169,7 @@ a:hover{
     border-radius: 40px;
     background-color: transparent;
 }
-.save_btn:hover{
+#dtp_save_btn:hover{
     background-color: lightgrey;
     color: white;
-}
-.dtp_close{
-    position: absolute;
-    top: 0;
-    right: 14px;
-    font-size: 42px;
-    transform: rotate(45deg);
-    cursor: pointer;
 }
