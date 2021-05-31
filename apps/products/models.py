@@ -41,8 +41,8 @@ class CategoryProduct(BaseModel):
         self.changed_by = value
 
     class Meta:
-        verbose_name = _("Categoria de Producto")
-        verbose_name_plural = _("Categorias de Productos")
+        verbose_name = ("Categoria de Producto")
+        verbose_name_plural = ("Categorias de Productos")
 
     def __str__(self):
         return self.description
@@ -62,8 +62,8 @@ class Indicator(BaseModel):
         self.changed_by = value
 
     class Meta:
-        verbose_name = _("Indicador de Oferta")
-        verbose_name_plural = _("Indicadores de Ofertas")
+        verbose_name = ("Indicador de Oferta")
+        verbose_name_plural = ("Indicadores de Ofertas")
 
     def __str__(self):
         return f'Oferta de la categoria {self.category_product} : {self.descount_value}%'
@@ -86,8 +86,8 @@ class Product(BaseModel):
         self.changed_by = value
 
     class Meta:
-        verbose_name = _("Product")
-        verbose_name_plural = _("Products")
+        verbose_name = ("Producto")
+        verbose_name_plural = ("Productos")
 
     def __str__(self):
         return self.name
