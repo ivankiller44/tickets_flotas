@@ -73,7 +73,9 @@ class Indicator(BaseModel):
 class Product(BaseModel):
 
     name = models.CharField('Nombre de Producto', max_length=150, unique=True, blank=False, null=False)
-    
+    description = models.TextField('Descripcion de Producto', blank=False, null=False)
+    image = models.ImageField('Imagen del Producto', upload_to='products/', blank=True, null=True)
+    historical = HistoricalRecords()
 
     @property
     def _history_user(self):
