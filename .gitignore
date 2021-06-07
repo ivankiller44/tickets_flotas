@@ -1,3 +1,8 @@
 ecommerce_rest/__pycache__/urls.cpython-39.pyc
 apps/products/api/__pycache__/urls.cpython-39.pyc
 apps/products/api/__pycache__/urls.cpython-39.pyc
+apps/products/migrations/__pycache__/0002_auto_20210607_1452.cpython-39.pyc
+apps/products/__pycache__/models.cpython-39.pyc
+apps/base/__pycache__/api.cpython-39.pyc
+apps/products/api/views/__pycache__/general_views.cpython-39.pyc
+apps/products/api/views/__pycache__/general_views.cpython-39.pyc
