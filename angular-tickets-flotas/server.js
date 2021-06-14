@@ -9,7 +9,7 @@ app.get('/assets', function(req, res){
     res.sendFile(__dirname + '/dist/assets');
 });
 app.get('/*', function(req, res){
-    res.sendFile(__dirname + '/dist/index.html');
+    res.sendFile(__dirname + '/dist/angular-tickets-flotas/index.html');
 });
 
 var port = process.env.PORT || 3000;
