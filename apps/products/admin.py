@@ -3,8 +3,8 @@ from apps.products.models import *
 
 # Register your models here.
 
-admin.site.register(Departamento)
-admin.site.register(Departamento1)
+admin.site.register(Origen)
+admin.site.register(Destino)
 admin.site.register(TipoDeBus)
 admin.site.register(NumeroDeBus)
 admin.site.register(FechaDeSalida)

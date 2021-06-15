@@ -5,10 +5,10 @@ from apps.base.models import BaseModel
 # Create your models here.
 
 
-class Departamento(BaseModel):
+class Origen(BaseModel):
 
     # TODO> Define Fields Here
-    departamento = models.CharField('Description', max_length=50, blank=False, null=True, unique=True)
+    origen = models.CharField('Departamento', max_length=50, blank=False, null=True, unique=True)
     historical = HistoricalRecords()
 
     @property
@@ -20,16 +20,16 @@ class Departamento(BaseModel):
         self.changed_by = value
 
     class Meta:
-        verbose_name = ("Departamento")
-        verbose_name_plural = ("Departamentos")
+        verbose_name = ("Origen")
+        verbose_name_plural = ("Origenes")
 
     def __str__(self):
-        return self.departamento
+        return self.origen
 
-class Departamento1(BaseModel):
+class Destino(BaseModel):
 
     # TODO> Define Fields Here
-    departamento = models.CharField('Description', max_length=50, blank=False, null=True, unique=True)
+    destino = models.CharField('Despartamento1', max_length=50, blank=False, null=True, unique=True)
     historical = HistoricalRecords()
 
     @property
@@ -41,15 +41,15 @@ class Departamento1(BaseModel):
         self.changed_by = value
 
     class Meta:
-        verbose_name = ("Departamento1")
-        verbose_name_plural = ("Departamentos1")
+        verbose_name = ("Destino")
+        verbose_name_plural = ("Destinos")
 
     def __str__(self):
-        return self.departamento1
+        return self.destino
 
 class TipoDeBus(BaseModel):
     
-    tipo = models.CharField('Description', max_length=50, unique=True, null=True, blank=False)
+    tipo = models.CharField('Tipo', max_length=50, unique=True, null=True, blank=False)
     historical = HistoricalRecords()
 
     @property
@@ -105,7 +105,7 @@ class FechaDeSalida(BaseModel):
         verbose_name_plural = ("Fechas de Salidas")
 
     def __str__(self):
-        return self.fecha_de_salida
+        return str(self.fecha_de_salida)
 
 class HoraDeSalida(BaseModel):
 
@@ -125,13 +125,16 @@ class HoraDeSalida(BaseModel):
         verbose_name_plural = ("Horas de Salidas")
 
     def __str__(self):
-        return self.hora_de_salida
+        return str(self.hora_de_salida)
 
 
 class Viaje(BaseModel):
 
-    origen = models.ForeignKey(Departamento, on_delete=models.CASCADE, verbose_name='Departamento')
-    destino = models.ForeignKey(Departamento1, on_delete=models.CASCADE, verbose_name='Departamento1')
+    name = models.CharField('Nombre Del Viaje', max_length=150, unique=True, blank=False, null=True)
+    #name = models.CharField('Nombre de Producto', max_length=150, unique=True, blank=False, null=False)
+
+    origen = models.ForeignKey(Origen, on_delete=models.CASCADE, verbose_name='Origen')
+    destino = models.ForeignKey(Destino, on_delete=models.CASCADE, verbose_name='Destino')
 
     tipo_de_bus = models.ForeignKey(TipoDeBus, on_delete=models.CASCADE, verbose_name='Tipo de Bus')
     numero_de_bus = models.ForeignKey(NumeroDeBus, on_delete=models.CASCADE, verbose_name='Numero de Bus')
@@ -156,8 +159,8 @@ class Viaje(BaseModel):
         self.changed_by = value
 
     class Meta:
-        verbose_name = ("Producto")
-        verbose_name_plural = ("Productos")
+        verbose_name = ("Viaje")
+        verbose_name_plural = ("Viajes")
 
     def __str__(self):
         return self.name

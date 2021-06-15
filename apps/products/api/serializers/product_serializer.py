@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from apps.products.models import Viaje
-from apps.products.api.serializers.general_serializers import DepartamentoSerializer, TipoDeBusSerializer, NumeroDeBusSerializer, FechaDeSalidaSerializer, HoraDeSalidaSerializer
+from apps.products.api.serializers.general_serializers import OrigenSerializer, DestinoSerializer, TipoDeBusSerializer, NumeroDeBusSerializer, FechaDeSalidaSerializer, HoraDeSalidaSerializer
 
 class ViajeSerializer(serializers.ModelSerializer):
     #measure_unit = serializers.StringRelatedField()
@@ -15,7 +15,7 @@ class ViajeSerializer(serializers.ModelSerializer):
         return {
  
             'id' : instance.id,
-            'origen' : instance.origen.description, 
+            #'origen' : instance.origen, 
             #'name' : instance.name,
             #'measure_unit' : instance.measure_unit.description,
             #'category_product' : instance.category_product.description,
