@@ -6,6 +6,8 @@ from apps.products.api.serializers.general_serializers import OrigenSerializer, 
 class ViajeSerializer(serializers.ModelSerializer):
     #measure_unit = serializers.StringRelatedField()
     #category_product = serializers.StringRelatedField()
+    #origen = serializers.StringRelatedField()
+    
 
     class Meta: 
         model = Viaje
@@ -15,8 +17,12 @@ class ViajeSerializer(serializers.ModelSerializer):
         return {
  
             'id' : instance.id,
-            #'origen' : instance.origen, 
-            #'name' : instance.name,
-            #'measure_unit' : instance.measure_unit.description,
-            #'category_product' : instance.category_product.description,
+            'origen' : instance.origen.origen,
+            'destino' : instance.destino.destino,
+            'tipo_de_bus' : instance.tipo_de_bus.tipo,
+            'numero_de_bus' : instance.numero_de_bus.numero_de_bus,
+            'fecha_de_salida' : instance.fecha_de_salida.fecha_de_salida,
+            'hora_de_salida' : instance.hora_de_salida.hora_de_salida,
+            'estado' : instance.estado,
+            'precio' : instance.precio,
         }
