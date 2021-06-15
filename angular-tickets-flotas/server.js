@@ -12,7 +12,7 @@ app.get('/*', function(req, res){
     res.sendFile(__dirname + '/dist/angular-tickets-flotas/index.html');
 });
 
-var port = process.env.PORT || 4200;
+var port = process.env.PORT || 3000;
 app.listen(port, function(){
     console.log('server running on port ' + port + '.');
 })
