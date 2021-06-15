@@ -1,4 +1,4 @@
-from apps.products.models import Departamento, TipoDeBus, NumeroDeBus, FechaDeSalida, HoraDeSalida
+from apps.products.models import Departamento, Departamento1, TipoDeBus, NumeroDeBus, FechaDeSalida, HoraDeSalida
 
 from rest_framework import serializers
 
@@ -6,6 +6,12 @@ class DepartamentoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Departamento
+        exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
+
+class Departamento1Serializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Departamento1
         exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
 
 class TipoDeBusSerializer(serializers.ModelSerializer):

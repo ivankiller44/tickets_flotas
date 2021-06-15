@@ -8,7 +8,7 @@ from apps.base.models import BaseModel
 class Departamento(BaseModel):
 
     # TODO> Define Fields Here
-    departamento = models.CharField('Description', max_length=50, blank=False, null=False, unique=True)
+    departamento = models.CharField('Description', max_length=50, blank=False, null=True, unique=True)
     historical = HistoricalRecords()
 
     @property
@@ -29,7 +29,7 @@ class Departamento(BaseModel):
 class Departamento1(BaseModel):
 
     # TODO> Define Fields Here
-    departamento = models.CharField('Description', max_length=50, blank=False, null=False, unique=True)
+    departamento = models.CharField('Description', max_length=50, blank=False, null=True, unique=True)
     historical = HistoricalRecords()
 
     @property
@@ -49,7 +49,7 @@ class Departamento1(BaseModel):
 
 class TipoDeBus(BaseModel):
     
-    tipo = models.CharField('Description', max_length=50, unique=True, null=False, blank=False)
+    tipo = models.CharField('Description', max_length=50, unique=True, null=True, blank=False)
     historical = HistoricalRecords()
 
     @property
@@ -69,7 +69,7 @@ class TipoDeBus(BaseModel):
 
 class NumeroDeBus(BaseModel):
 
-    numero_de_bus = models.CharField('Numero De Bus', max_length=10, unique=True, null=False, blank=False)
+    numero_de_bus = models.CharField('Numero De Bus', max_length=10, unique=True, null=True, blank=False)
     historical = HistoricalRecords()
 
     @property
@@ -89,7 +89,7 @@ class NumeroDeBus(BaseModel):
 
 class FechaDeSalida(BaseModel):
 
-    fecha_de_salida = models.DateField('Fecha de Salida')
+    fecha_de_salida = models.DateField('Fecha de Salida', null=True)
     historical = HistoricalRecords()
 
     @property
@@ -109,7 +109,7 @@ class FechaDeSalida(BaseModel):
 
 class HoraDeSalida(BaseModel):
 
-    hora_de_salida = models.TimeField('Hora de Salida')
+    hora_de_salida = models.TimeField('Hora de Salida', null=True)
     historical = HistoricalRecords()
 
     @property
@@ -138,7 +138,7 @@ class Viaje(BaseModel):
     fecha_de_salida = models.ForeignKey(FechaDeSalida, on_delete=models.CASCADE, verbose_name='Fecha de Salida')
     hora_de_salida = models.ForeignKey(HoraDeSalida, on_delete=models.CASCADE, verbose_name='Hora de Salida')
     estado = models.BooleanField('Estado del Bus', null=True)
-    precio = models.PositiveIntegerField()
+    precio = models.PositiveIntegerField(default = 0)
 
     #name = models.CharField('Nombre de Producto', max_length=150, unique=True, blank=False, null=False)
     #description = models.TextField('Descripcion de Producto', blank=False, null=False)
