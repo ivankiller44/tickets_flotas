@@ -26,6 +26,27 @@ class Departamento(BaseModel):
     def __str__(self):
         return self.departamento
 
+class Departamento1(BaseModel):
+
+    # TODO> Define Fields Here
+    departamento = models.CharField('Description', max_length=50, blank=False, null=False, unique=True)
+    historical = HistoricalRecords()
+
+    @property
+    def _history_user(self):
+        return self.changed_by
+
+    @_history_user.setter
+    def _history_user(self, value):
+        self.changed_by = value
+
+    class Meta:
+        verbose_name = ("Departamento1")
+        verbose_name_plural = ("Departamentos1")
+
+    def __str__(self):
+        return self.departamento1
+
 class TipoDeBus(BaseModel):
     
     tipo = models.CharField('Description', max_length=50, unique=True, null=False, blank=False)
@@ -110,7 +131,7 @@ class HoraDeSalida(BaseModel):
 class Viaje(BaseModel):
 
     origen = models.ForeignKey(Departamento, on_delete=models.CASCADE, verbose_name='Departamento')
-    destino = models.ForeignKey(Departamento, on_delete=models.CASCADE, verbose_name='Departamento')
+    destino = models.ForeignKey(Departamento1, on_delete=models.CASCADE, verbose_name='Departamento1')
 
     tipo_de_bus = models.ForeignKey(TipoDeBus, on_delete=models.CASCADE, verbose_name='Tipo de Bus')
     numero_de_bus = models.ForeignKey(NumeroDeBus, on_delete=models.CASCADE, verbose_name='Numero de Bus')

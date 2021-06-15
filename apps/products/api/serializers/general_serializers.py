@@ -1,21 +1,34 @@
-from apps.products.models import MeasureUnit, CategoryProduct, Indicator
+from apps.products.models import Departamento, TipoDeBus, NumeroDeBus, FechaDeSalida, HoraDeSalida
 
 from rest_framework import serializers
 
-class MeasureUnitSerializer(serializers.ModelSerializer):
+class DepartamentoSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = MeasureUnit
+        model = Departamento
         exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
 
-class CategoryProductSerializer(serializers.ModelSerializer):
+class TipoDeBusSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = CategoryProduct
+        model = TipoDeBus
         exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
 
-class IndicatorSerializer(serializers.ModelSerializer):
+class NumeroDeBusSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Indicator
+        model = NumeroDeBus
         exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
+        
+class FechaDeSalidaSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = FechaDeSalida
+        exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
+
+class HoraDeSalidaSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = HoraDeSalida
+        exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
+

@@ -3,7 +3,9 @@ from apps.products.models import *
 
 # Register your models here.
 
-admin.site.register(MeasureUnit)
-admin.site.register(CategoryProduct)
-admin.site.register(Indicator)
-admin.site.register(Product)
+admin.site.register(Departamento)
+admin.site.register(TipoDeBus)
+admin.site.register(NumeroDeBus)
+admin.site.register(FechaDeSalida)
+admin.site.register(HoraDeSalida)
+admin.site.register(Viaje)
