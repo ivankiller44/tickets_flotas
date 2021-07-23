@@ -1,40 +1,21 @@
-from apps.products.models import Origen, Destino, TipoDeBus, NumeroDeBus, FechaDeSalida, HoraDeSalida
+from apps.products.models import Ubicacion, Descripcion, Fotos
 
 from rest_framework import serializers
 
-class OrigenSerializer(serializers.ModelSerializer):
+class UbicacionSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Origen
+        model = Ubicacion
         exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
 
-class DestinoSerializer(serializers.ModelSerializer):
+class DescripcionSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Destino
+        model = Descripcion
         exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
 
-class TipoDeBusSerializer(serializers.ModelSerializer):
+class FotosSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = TipoDeBus
+        model = Fotos
         exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
-
-class NumeroDeBusSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = NumeroDeBus
-        exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
-        
-class FechaDeSalidaSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = FechaDeSalida
-        exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
-
-class HoraDeSalidaSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = HoraDeSalida
-        exclude = ('state', 'created_date', 'modified_date', 'deleted_date',)
-
